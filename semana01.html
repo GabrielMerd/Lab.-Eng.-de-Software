@@ -10,27 +10,31 @@
     <a href="index.html">Voltar</a>
     <script>
 function verificarTipoDado() {
-    // Solicitando ao user a entrada de um dado...
+    // Solicitar ao usuário a entrada de um dado via teclado
     var dado = prompt("Por favor, insira um dado:");
 
-    // Verificando se o dado não é nulo...
+    // Verificar se o dado não é nulo
     if (dado !== null) {
-        // Perguntar ao user se deseja verificar o tipo do dado
+        // Perguntar ao usuário se deseja verificar o tipo do dado
         var verificar = confirm("Você deseja verificar o tipo do dado informado?");
         
-        // Verificando a escolha do user...
+        // Verificar a escolha do usuário
         if (verificar) {
-            // Escrever o tipo do dado no corpo da página...
-            document.body.innerHTML = "O tipo do dado é: " + typeof dado;
+            // Escrever o tipo do dado
+            console.log("O tipo do dado é: " + typeof dado);
         } else {
-            // Escrever a mensagem caso o user não queira verificar o tipo do dado...
-            document.body.innerHTML = "Obrigado por visitar esta página";
+            // Exibir a mensagem caso o usuário não queira verificar o tipo do dado
+            console.log("Obrigado por visitar esta página");
         }
     } else {
-        // Caso o user cancele a entrada de dado...
-        document.body.innerHTML = "Operação cancelada pelo usuário.";
+        // Caso o usuário cancele a entrada de dado
+        console.log("Operação cancelada pelo usuário.");
     }
 }
+
+// Chamar a função para iniciar o processo
+verificarTipoDado();
+
 </script>
    
 <button onclick="verificarTipoDado()">Clique aqui para inserir um dado</button>
