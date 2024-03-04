@@ -4,20 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semana 01</title>
+    <script>
+function verificarTipoDado() {
+    // Solicitando ao user a entrada de um dado...
+    var dado = prompt("Por favor, insira um dado:");
+
+    // Verificando se o dado não é nulo...
+    if (dado !== null) {
+        // Perguntar ao user se deseja verificar o tipo do dado
+        var verificar = confirm("Você deseja verificar o tipo do dado informado?");
+        
+        // Verificando a escolha do user...
+        if (verificar) {
+            // Escrever o tipo do dado no corpo da página...
+            document.body.innerHTML = "O tipo do dado é: " + typeof dado;
+        } else {
+            // Escrever a mensagem caso o user não queira verificar o tipo do dado...
+            document.body.innerHTML = "Obrigado por visitar esta página";
+        }
+    } else {
+        // Caso o user cancele a entrada de dado...
+        document.body.innerHTML = "Operação cancelada pelo usuário.";
+    }
+}
+</script>
 </head>
 <body>
-    <h1>Atividade 01</h1>
+    <h1>Atividade Aula 01</h1>
     <a href="index.html">Voltar</a>
-
-    <script language="JavaScript" type="text/JavaScript">
-        
-        let nome = prompt("Digite seu nome","");
-        if(confirm("Quer ver seu nome?"))
-        {
-        alert("Seu nome é: "+ nome);
-        }
-        
-        </script>
-
+   
+<button onclick="verificarTipoDado()">Clique aqui para inserir um dado</button>
 </body>
 </html>
