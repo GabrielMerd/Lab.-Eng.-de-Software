@@ -21,5 +21,3 @@ de alerta se o número é par ou ímpar.
 positivo. Assim que o usuário digitar um valor válido calcule o fatorial do
 mesmo e exiba o resultado em uma janela de alerta.
 -------------------------------------------------------------------------------
-
-                          ATIVIDADES DA SEMANA 02
