@@ -34,7 +34,7 @@ formato:
 Quarta-feira, 15 de fevereiro de 2023
 
 2. Pesquise a utilização do método setTimeout() e implemente
-um relógio que atualize o horário a cada segundo:
+um relógio que atualize o horário a cada segundo.
 
 3. Implemente um script que leia uma palavra ou frase de um
 campo de texto e exiba em uma janela de alert se o texto é ou
