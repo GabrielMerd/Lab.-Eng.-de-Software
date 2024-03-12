@@ -21,3 +21,24 @@ de alerta se o número é par ou ímpar.
 positivo. Assim que o usuário digitar um valor válido calcule o fatorial do
 mesmo e exiba o resultado em uma janela de alerta.
 -------------------------------------------------------------------------------
+                          ATIVIDADES DA SEMANA 02
+-------------------------------------------------------------------------------
+1. Implemente um script com um array cujos valoressejam adicionados dinamicamente
+pelo usuárioutilizando-se formulário. A cada nova inserção exiba todos os dados
+adastrados em ordem alfabética em uma lista ordenada do html.
+-------------------------------------------------------------------------------
+                          ATIVIDADES DA SEMANA 03
+-------------------------------------------------------------------------------
+1. Implemente um script JavaScript que exiba a data atual no
+formato:
+Quarta-feira, 15 de fevereiro de 2023
+
+2. Pesquise a utilização do método setTimeout() e implemente
+um relógio que atualize o horário a cada segundo:
+
+3. Implemente um script que leia uma palavra ou frase de um
+campo de texto e exiba em uma janela de alert se o texto é ou
+não um palíndromo.
+-------------------------------------------------------------------------------
+                          ATIVIDADES DA SEMANA 04
+-------------------------------------------------------------------------------
