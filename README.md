@@ -44,19 +44,13 @@ não um palíndromo.
 -------------------------------------------------------------------------------
 1. Implemente uma classe Aluno e outra Professor que herdem
 atributos de uma classe Pessoa:
-– Pessoa:
- nome
- sobrenome
- email
- data_nascimento
- nomeCompleto()
+– Pessoa: nome, sobrenome
+ email, data_nascimento, nomeCompleto()
 
-– Aluno:
- curso
+– Aluno: curso
 
-– Professor:
- area_atuacao
- link_lattes
+– Professor: area_atuacao, link_lattes
+ 
 -------------------------------------------------------------------------------
                           ATIVIDADES DA SEMANA 05
 -------------------------------------------------------------------------------
