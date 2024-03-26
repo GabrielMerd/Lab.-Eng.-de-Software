@@ -42,3 +42,21 @@ não um palíndromo.
 -------------------------------------------------------------------------------
                           ATIVIDADES DA SEMANA 04
 -------------------------------------------------------------------------------
+1. Implemente uma classe Aluno e outra Professor que herdem
+atributos de uma classe Pessoa:
+– Pessoa:
+• nome
+• sobrenome
+• email
+• data_nascimento
+• nomeCompleto()
+
+– Aluno:
+• curso
+
+– Professor:
+• area_atuacao
+• link_lattes
+-------------------------------------------------------------------------------
+                          ATIVIDADES DA SEMANA 05
+-------------------------------------------------------------------------------
