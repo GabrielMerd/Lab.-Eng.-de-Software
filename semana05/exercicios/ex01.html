@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar e Remover Pessoas</title>
+<style>
+body 
+    {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 2.5rem;
+    }
+
+#contador
+    {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    }
+
+.icon 
+    {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    }
+
+.button-container 
+    {
+    display: flex;
+    gap: 0.5rem;
+    }
+
+button 
+    {
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    }
+
+button:hover 
+    {
+    background-color: #007bff;
+    color: white;
+    }
+
+button:focus 
+    {
+    outline: none;
+    box-shadow: none;
+    }
+
+#reset-button 
+    {
+    background-color: #dc3545;
+    color: white;
+    margin-top: 1rem;
+    }
+
+#reset-button:hover 
+    {
+    background-color: #d01a32;
+    }
+</style>
+
+</head>
+<body>
+    <div id="contador"></div>
+
+    <script>
+        var totPessoas = 0;
+        var homens = 0;
+        var mulheres = 0;
+
+        function CreateCont() 
+        {
+            var contadorDiv = document.getElementById("contador");
+
+            var H_icon = document.createElement("div");
+            H_icon.textContent = "♂️ Homens: " + homens;
+            H_icon.className = "icon";
+// 
+            var M_icon = document.createElement("div");
+            M_icon.textContent = "♀️ Mulheres: " + mulheres;
+            M_icon.className = "icon";
+//
+            var totalIcon = document.createElement("div");
+            totalIcon.textContent = "Total: " + totPessoas;
+            totalIcon.className = "icon";
+//
+            var H_ButtonContainer = document.createElement("div");
+            H_ButtonContainer.className = "button-container";
+            var homemButtonPlus = CreateBottom("+", "homens", 1);
+            var homemButtonMinus = CreateBottom("-", "homens", -1);
+            H_ButtonContainer.appendChild(homemButtonPlus);
+            H_ButtonContainer.appendChild(homemButtonMinus);
+//
+            var M_ButtonContainer = document.createElement("div");
+            M_ButtonContainer.className = "button-container";
+            var mulherButtonPlus = CreateBottom("+", "mulheres", 1);
+            var mulherButtonMinus = CreateBottom("-", "mulheres", -1);
+            M_ButtonContainer.appendChild(mulherButtonPlus);
+            M_ButtonContainer.appendChild(mulherButtonMinus);
+//
+            var resetButton = document.createElement("button");
+            resetButton.textContent = "Zerar";
+            resetButton.id = "reset-button";
+            resetButton.onclick = resetarContador;
+//
+            contadorDiv.appendChild(H_icon);
+            contadorDiv.appendChild(H_ButtonContainer);
+            contadorDiv.appendChild(M_icon);
+            contadorDiv.appendChild(M_ButtonContainer);
+            contadorDiv.appendChild(totalIcon);
+            contadorDiv.appendChild(resetButton);
+        }
+
+        function CreateBottom(texto, sexo, quantidade) 
+        {
+            var botao = document.createElement("button");
+            botao.textContent = texto;
+            botao.onclick = function() {
+                atualizarPessoas(sexo, quantidade);
+            };
+            return botao;
+        }
+
+        function atualizarPessoas(sexo, quantidade) 
+        {
+            if (sexo === 'homens') {
+                homens += quantidade;
+            } else {
+                mulheres += quantidade;
+            }
+
+            totPessoas += quantidade;
+            atualizarIcones();
+        }
+
+        function atualizarIcones() 
+        {
+            var H_icon = document.querySelector("#contador .icon:nth-of-type(1)");
+            var M_icon = document.querySelector("#contador .icon:nth-of-type(3)");
+            var totalIcon = document.querySelector("#contador .icon:nth-of-type(5)");
+//
+            H_icon.textContent = "♂️ Homens: " + homens;
+            M_icon.textContent = "♀️ Mulheres: " + mulheres;
+            totalIcon.textContent = "Total: " + totPessoas;
+        }
+
+        function resetarContador() 
+        {
+            totPessoas = 0;
+            homens = 0;
+            mulheres = 0;
+            atualizarIcones();
+        }
+
+        CreateCont();
+
+
+    </script>
+</body>
+</html>
